@@ -10,14 +10,14 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "uniffi-bindgen";
-  version = "0.20.0";
+  version = "0.21.0";
 
   src = fetchCrate {
     inherit pname version;
-    sha256 = "sha256-E0OMMg9GuZCwPuJKzMpN0PNxZicGW1blD322Jl01qQE=";
+    sha256 = lib.fakeSha256;
   };
 
-  cargoSha256 = "sha256-REY88irDm45JOBwdb79JVrIyfuOB6HcAgIzYO65O0uE=";
+  cargoSha256 = lib.fakeSha256;
 
   nativeBuildInputs = [ makeWrapper ];
 
